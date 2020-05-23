@@ -10,8 +10,7 @@
   font-display: block;
 }
 
-[class^="icon-"],
-[class*=" icon-"] {
+.lo-icon {
   font-family: "lo" !important;
   speak: none;
   font-style: normal;
@@ -23,6 +22,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.lo:before {
+.lo-icon:before {
   content: "\e900";
 }
