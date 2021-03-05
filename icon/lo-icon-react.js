@@ -28,3 +28,5 @@ const LoIcon = () => {
     </svg>
   );
 };
+
+export default LoIcon;
