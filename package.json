@@ -1,0 +1,35 @@
+{
+  "name": "lo-icon",
+  "version": "1.0.5",
+  "description": "Personal branding icon",
+  "main": "dist/lo-icon.umd.js",
+  "module": "dist/lo-icon.mjs",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "generate-icon-comp": "svgr -- src/icon/lo-icon.svg"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lokesh-coder/lo-icon.git"
+  },
+  "keywords": [
+    "lokesh"
+  ],
+  "author": "Lokesh Rajendran",
+  "bugs": {
+    "url": "https://github.com/lokesh-coder/lo-icon/issues"
+  },
+  "homepage": "https://github.com/lokesh-coder/lo-icon#readme",
+  "devDependencies": {
+    "@svgr/cli": "^8.1.0",
+    "@types/react": "^18.2.48",
+    "@vitejs/plugin-react": "^4.2.1",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.12"
+  },
+  "peer-dependencies": {
+    "react": "^18.2.0"
+  }
+}
