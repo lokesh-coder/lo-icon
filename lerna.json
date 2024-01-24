@@ -1,0 +1,28 @@
+{
+  "$schema": "node_modules/@lerna-lite/cli/schemas/lerna-schema.json",
+  "version": "0.0.0",
+  "packages": [
+    "packages/*"
+  ],
+  "useWorkspaces": true,
+  "npmClient": "yarn",
+  "loglevel": "verbose",
+  "command": {
+    "version": {
+      "allowBranch": "main",
+      "yes": true,
+      "conventionalCommits": true,
+      "createRelease": "github",
+      "independentSubpackages": true,
+      "message": "chore: publish new version"
+    },
+    "publish": {
+      "removePackageFields": [
+        "devDependencies",
+        "scripts"
+      ],
+      "yes": true
+    }
+  },
+  "changelogPreset": "angular"
+}

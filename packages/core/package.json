@@ -1,0 +1,17 @@
+{
+  "name": "lo-icon",
+  "version": "1.0.0",
+  "description": "Personal branding icon",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lokesh-coder/lo-icon.git"
+  },
+  "keywords": [
+    "lokesh"
+  ],
+  "author": "Lokesh Rajendran",
+  "bugs": {
+    "url": "https://github.com/lokesh-coder/lo-icon/issues"
+  },
+  "homepage": "https://github.com/lokesh-coder/lo-icon#readme"
+}

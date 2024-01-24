@@ -1,14 +1,15 @@
 {
-  "name": "lo-icon",
-  "version": "1.0.5",
+  "name": "lo-icon-workspace",
+  "version": "1.0.0",
   "description": "Personal branding icon",
-  "main": "dist/lo-icon.umd.js",
-  "module": "dist/lo-icon.mjs",
+  "private": true,
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
-    "generate-icon-comp": "svgr -- src/icon/lo-icon.svg"
+    "build": "lerna run build --stream",
+    "version": "lerna version",
+    "generate-icon-comp": "svgr -- packages/core/images/svg/lo-icon.svg",
+    "lint": "lerna run lint --parallel",
+    "lint:fix": "lerna run lint:fix --parallel",
+    "publish": "lerna publish from-git"
   },
   "repository": {
     "type": "git",
@@ -23,13 +24,48 @@
   },
   "homepage": "https://github.com/lokesh-coder/lo-icon#readme",
   "devDependencies": {
+    "@lerna-lite/cli": "^3.2.1",
+    "@lerna-lite/run": "^3.2.1",
     "@svgr/cli": "^8.1.0",
     "@types/react": "^18.2.48",
     "@vitejs/plugin-react": "^4.2.1",
     "typescript": "^5.3.3",
-    "vite": "^5.0.12"
+    "vite": "^5.0.12",
+    "@commitlint/cli": "^18.4.4",
+    "@commitlint/config-conventional": "^18.4.4",
+    "@commitlint/config-lerna-scopes": "^18.4.4",
+    "@lerna-lite/publish": "^3.2.1",
+    "@lerna-lite/version": "^3.2.1",
+    "@typescript-eslint/eslint-plugin": "^5.54.0",
+    "@typescript-eslint/parser": "^6.19.0",
+    "astro-eslint-parser": "^0.11.0",
+    "eslint": "^8.56.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-astro": "^0.31.3",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "husky": "^8.0.3",
+    "prettier": "^3.2.4",
+    "prettier-plugin-astro": "^0.8.0"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional",
+      "@commitlint/config-lerna-scopes"
+    ]
   },
   "peer-dependencies": {
     "react": "^18.2.0"
-  }
+  },
+  "workspaces": [
+    "packages/*",
+    "docs"
+  ]
 }

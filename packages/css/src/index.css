@@ -3,8 +3,8 @@
   src: url("fonts/lo.eot?pw2q8o");
   src: url("fonts/lo.eot?pw2q8o#iefix") format("embedded-opentype"),
     url("fonts/lo.ttf?pw2q8o") format("truetype"),
-    url("fonts/lo.woff?pw2q8o") format("woff"),
-    url("fonts/lo.svg?pw2q8o#lo") format("svg");
+    url("fonts/lo.woff?pw2q8o") format("woff");
+  /* url("fonts/lo.svg?pw2q8o#lo") format("svg"); */
   font-weight: normal;
   font-style: normal;
   font-display: block;
