@@ -1,15 +1,17 @@
 {
   "name": "lo-icon-workspace",
-  "version": "1.0.0",
+  "version": "1.0.0-workspace",
   "description": "Personal branding icon",
   "private": true,
   "scripts": {
+    "start": "lerna run start --stream",
     "build": "lerna run build --stream",
     "release": "lerna version",
     "generate-icon-comp": "svgr -- packages/core/images/svg/lo-icon.svg",
     "lint": "lerna run lint --parallel",
     "lint:fix": "lerna run lint:fix --parallel",
-    "publish": "lerna publish from-git"
+    "publish": "lerna publish from-git",
+    "docs": "yarn start --scope=lo-icon-docs"
   },
   "repository": {
     "type": "git",
@@ -51,7 +53,7 @@
     "eslint-plugin-unused-imports": "^2.0.0",
     "husky": "^8.0.3",
     "prettier": "^3.2.4",
-    "prettier-plugin-astro": "^0.8.0",
+    "prettier-plugin-astro": "^0.13.0",
     "typescript": "^5.3.3",
     "vite": "^5.0.12"
   },
@@ -61,11 +63,11 @@
       "@commitlint/config-lerna-scopes"
     ]
   },
-  "peer-dependencies": {
+  "optionalDependencies": {
     "react": "^18.2.0"
   },
   "workspaces": [
     "packages/*",
-    "docs"
+    "website/*"
   ]
 }
