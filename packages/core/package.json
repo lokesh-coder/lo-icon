@@ -2,6 +2,9 @@
   "name": "lo-icon",
   "version": "1.0.6",
   "description": "Personal branding icon",
+  "scripts": {
+    "build": "cp ../../README.md ./README.md"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lokesh-coder/lo-icon.git"
