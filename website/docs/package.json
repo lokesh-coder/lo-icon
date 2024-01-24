@@ -1,6 +1,6 @@
 {
   "name": "lo-icon-docs",
-  "version": "0.0.1",
+  "version": "1.1.1",
   "private": true,
   "scripts": {
     "dev": "astro dev",
