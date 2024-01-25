@@ -5,10 +5,12 @@ import { defineConfig } from 'astro/config';
 // https://astro.build/config
 export default defineConfig({
 	outDir: '../../docs-dist',
+	site: 'https://lokesh-coder.github.io/',
+	base: '/lo-icon',
 	integrations: [mdx(), tailwind()],
 	markdown: {
 		shikiConfig: {
-			theme: 'material-theme-palenight',
+			theme: 'github-light',
 		},
 	},
 });
