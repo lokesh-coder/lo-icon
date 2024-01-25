@@ -11,7 +11,7 @@ permissions:
   id-token: write
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -58,12 +58,18 @@ jobs:
           NPM_CONFIG_PROVENANCE: true
 
       - name: Upload artifacts
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with: 
           path: docs-dist
+    
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
+    runs-on: ubuntu-latest
+    steps:
       - name: Deploy to GitHub Pages
-        id: deploy
-        uses: actions/deploy-pages@v3
-        with:
-          token: ${{ github.token }}
+        id: deployment
+        uses: actions/deploy-pages@v4
